@@ -1,0 +1,45 @@
+
+
+# INSTALL pip
+-> python3 -m pip install --upgrade pip
+
+
+# INSTALL virtualenv
+-> pip install virtualenv
+
+
+In ROOT project directory : -> python -m venv venv
+
+GO TO : cd venv/Scripts THEN  .\activate
+
+
+# VSCODE DEBUG
+You need to access "Python: Select Interpreter" on your VS Code settings 
+(ctrl+shift+p or clicking on the Python version on the status bar) and change the interpreter to the one located inside your virtualenv.
+
+
+
+# Install Requirements Package 
+-> pip install -r requirements.txt
+
+
+# Migrate Database
+- Delete the old  db.sqlite3 file (if you are reseting DB)
+
+-> python manage.py migrate
+-> python manage.py makemigrations network
+
+
+
+# Create Super User 
+-> python manage.py createsuperuser
+
+ > example: 
+ Username: admin 
+ Email address: admin@admin.com
+ Password: admin
+
+# FINISH
+-> python manage.py runserver
+
+
